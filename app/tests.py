@@ -38,7 +38,7 @@ class TestInfo(TestCase):
     
     def test_describe(self):
         info = InfomationEnterprise.objects.get(id = 1)
-        expected_describe = f'{info.describe}'
+        expected_describe = info.describe
         self.assertEqual(expected_describe, 'describe_of_company')
 
 
@@ -49,7 +49,7 @@ class TestPost(TestCase):
         info.post_set.create(title = 'title of username1')
     def test_title(self):
         post = Post.objects.get(id = 1)
-        expected_title = f'{post.title}'
+        expected_title = post.title
         self.assertEqual(expected_title, 'title of username1')
 
 
