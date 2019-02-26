@@ -16,7 +16,7 @@ script:
   - python manage.py makemigrations app
   - python manage.py migrate
   - python manage.py test --keepdb
-  - coverage run manage.py test app
+  - coverage run manage.py test app --keepdb
   - python query.py
 after-success:
   - codecov --token=7e44d6cb-5f46-4061-8545-013bd6e780cf
