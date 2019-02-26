@@ -17,8 +17,7 @@ script:
   - python manage.py migrate
   - coverage run manage.py test app --keepdb
   - python query.py
-after-success:
-  - codecov --token=7e44d6cb-5f46-4061-8545-013bd6e780cf
+  - codecov --token=7e44d6cb-5f46-4061-8545-013bd6e780cf 
 notifications:
   email:
   - acekun141@gmail.com
