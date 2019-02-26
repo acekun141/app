@@ -76,15 +76,15 @@ WSGI_APPLICATION = 'newapp.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 
-        # 'ENGINE': 'django.db.backends.oracle',
-        # 'NAME': 'XE',
-        # 'USER': 'travis',
-        # 'PASSWORD': 'travis',
-        # 'HOST':'localhost',
-        # 'PORT': '1521',
+        'ENGINE': 'django.db.backends.oracle',
+        'NAME': 'XE',
+        'USER': 'travis',
+        'PASSWORD': 'travis',
+        'HOST':'localhost',
+        'PORT': '1521',
     }
 }
 

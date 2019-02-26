@@ -11,13 +11,16 @@ before_install:
 
 install:
   - pip install -r requirements.txt
+  - pip install codecov
 script: 
   - python manage.py makemigrations app
   - python manage.py migrate
-  - python manage.py test 
+  - python manage.py test --keepdbs
   - coverage run --source='.' manage.py test --keepdb
   - coverage report
   - python query.py
+after-success:
+  - codecov -t 7e44d6cb-5f46-4061-8545-013bd6e780cf
 notifications:
   email:
     - acekun141@gmail.com
